@@ -3,119 +3,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apply - TICC 2026</title>
+    <title>Apply - Tech-Innovation Challenge</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Global Header -->
     <header class="site-header">
         <div class="container header-container">
             <div class="logo">
                 <a href="index.html">
                     <img src="NCDMB-LOGO.png" alt="NCDMB Logo" class="logo-img">
-                    <span class="logo-full">Technology Innovation Challenge Competition</span>
+                    <span class="logo-full">Tech-Innovation Challenge</span>
                 </a>
             </div>
             <nav class="main-nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="details.html">Details</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="facilitators.html">Facilitators</a></li>
+                    <li><a href="about.html">About TIC</a></li>
+                    <li class="has-dropdown">
+                        <a href="current-edition.html">Current Edition</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="current-edition.html#overview">Overview</a></li>
+                            <li><a href="timeline.html">Timeline</a></li>
+                            <li><a href="judges-mentors.html">Judges & Mentors</a></li>
+                            <li><a href="finalists-winners.html">Finalists</a></li>
+                            <li><a href="current-edition.html#bootcamp">Bootcamp</a></li>
+                            <li><a href="current-edition.html#finals">Finals</a></li>
+                            <li><a href="news-media.html">Media Gallery</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="past-editions.html">Past Editions</a></li>
+                    <li><a href="programme-structure.html">Programme Structure</a></li>
+                    <li><a href="news-media.html">News & Media</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
-            <a href="apply.html" class="btn btn-primary cta-apply">Apply Now</a>
+            <div class="header-right" style="display: flex; align-items: center; gap: 1rem;">
+                <div style="text-align: right; line-height: 1.1; display: none;">
+                    <span style="font-size: 0.6rem; text-transform: uppercase; font-family: var(--font-mono); display: block;">Powered by</span>
+                    <strong style="font-size: 0.8rem; font-family: var(--font-display);">EICL</strong>
+                </div>
+                <!-- Since we are on apply page, we don't necessarily need the button, or we can just leave it -->
+                <a href="apply.html" class="btn btn-primary cta-apply" style="visibility: hidden;">Apply Now</a>
+            </div>
         </div>
     </header>
 
     <main>
-        <section class="form-section">
+        <!-- Hero Banner -->
+        <section class="page-hero">
             <div class="container">
-                <div class="section-header text-center">
-                    <h2>Application Form</h2>
-                    <p class="section-lead">Submit your venture for the TICC 2026 maiden cohort. Ensure all details are accurate.</p>
+                <h1>Apply for TIC</h1>
+                <p class="subtitle">Your journey to commercializing energy innovation starts here.</p>
+            </div>
+        </section>
+
+        <!-- Eligibility Section -->
+        <section class="about-section">
+            <div class="container">
+                <div class="vm-grid">
+                    <div>
+                        <h2>Eligibility</h2>
+                        <p class="section-lead">We are looking for bold solutions that address critical challenges in Nigeria's energy sector.</p>
+                        <p style="margin-top: 1rem; font-family: var(--font-mono); font-weight: bold; color: var(--accent);">OPEN TO:</p>
+                        <ul style="list-style: square inside; margin-left: 1rem; margin-bottom: 1.5rem;">
+                            <li>Innovators</li>
+                            <li>Researchers</li>
+                            <li>Startups</li>
+                            <li>Entrepreneurs</li>
+                        </ul>
+                    </div>
+                    <div style="background-color: var(--ink-dark); color: var(--bg-paper); padding: 2rem; border: 2px solid var(--gold);">
+                        <h3 style="color: var(--gold); margin-bottom: 1rem;">Focus Areas</h3>
+                        <p>Your solution must be primarily focused on driving innovation within the following sectors:</p>
+                        <ul style="list-style: none; margin-top: 1rem;">
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(212, 175, 55, 0.3);">Oil & Gas Efficiency</li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(212, 175, 55, 0.3);">Renewable Energy Transition</li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(212, 175, 55, 0.3);">Energy Innovation & Tech</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Application Steps -->
+        <section class="journey-section">
+            <div class="container text-center">
+                <h2>Application Steps</h2>
+                <div class="fe-grid" style="margin-top: 2rem; grid-template-columns: repeat(5, 1fr);">
+                    <div style="padding: 1rem;">
+                        <span style="font-family: var(--font-display); font-size: 2rem; color: var(--gold); display: block;">1</span>
+                        <h4 style="color: var(--bg-paper); margin-top: 0.5rem;">Register</h4>
+                    </div>
+                    <div style="padding: 1rem;">
+                        <span style="font-family: var(--font-display); font-size: 2rem; color: var(--gold); display: block;">2</span>
+                        <h4 style="color: var(--bg-paper); margin-top: 0.5rem;">Submit Proposal</h4>
+                    </div>
+                    <div style="padding: 1rem;">
+                        <span style="font-family: var(--font-display); font-size: 2rem; color: var(--gold); display: block;">3</span>
+                        <h4 style="color: var(--bg-paper); margin-top: 0.5rem;">Screening</h4>
+                    </div>
+                    <div style="padding: 1rem;">
+                        <span style="font-family: var(--font-display); font-size: 2rem; color: var(--gold); display: block;">4</span>
+                        <h4 style="color: var(--bg-paper); margin-top: 0.5rem;">Pitching</h4>
+                    </div>
+                    <div style="padding: 1rem;">
+                        <span style="font-family: var(--font-display); font-size: 2rem; color: var(--gold); display: block;">5</span>
+                        <h4 style="color: var(--bg-paper); margin-top: 0.5rem;">Selection</h4>
+                    </div>
                 </div>
                 
-                <div class="form-container">
-                    <form action="#" method="POST">
-                        <div class="form-group">
-                            <label for="startup-name">Startup / Venture Name</label>
-                            <input type="text" id="startup-name" class="form-control" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="founder-name">Lead Founder Name</label>
-                            <input type="text" id="founder-name" class="form-control" required>
-                        </div>
+                <div style="margin-top: 3rem;">
+                    <a href="https://tech-ideas.ncdmb.gov.ng/" target="_blank" class="btn btn-primary btn-large" style="background-color: var(--gold); color: var(--ink-dark); border-color: var(--gold);">Apply Now on Tech-IDEAS Portal</a>
+                    <p style="margin-top: 1rem; font-family: var(--font-mono); font-size: 0.85rem; color: rgba(245, 239, 230, 0.7);">You will be redirected to the official ERIN / Tech-IDEAS application portal.</p>
+                </div>
+            </div>
+        </section>
 
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" class="form-control" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="focus-area">Focus Area</label>
-                            <select id="focus-area" class="form-control" required>
-                                <option value="">Select an area...</option>
-                                <option value="agritech">Agritech & Food Security</option>
-                                <option value="healthtech">Healthtech & Biotech</option>
-                                <option value="edtech">Edtech & Future of Work</option>
-                                <option value="fintech">Fintech & Financial Inclusion</option>
-                                <option value="cleantech">Cleantech & Renewable Energy</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="problem">Problem Statement</label>
-                            <textarea id="problem" class="form-control" placeholder="What specific problem are you solving in Nigeria?" required></textarea>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="solution">Solution & MVP Link</label>
-                            <textarea id="solution" class="form-control" placeholder="Describe your solution. Include a link to your prototype/MVP." required></textarea>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary btn-large">Submit Application</button>
-                    </form>
+        <!-- FAQ Area -->
+        <section class="about-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2>Frequently Asked Questions</h2>
+                </div>
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <div style="border-bottom: 2px solid var(--ink-dark); padding: 1rem 0;">
+                        <h4 style="font-size: 1.25rem; margin-bottom: 0.5rem;">When is the application deadline?</h4>
+                        <p>Applications for the maiden edition will close strictly on the date announced on our timeline. Late entries will not be accepted via the Tech-IDEAS portal.</p>
+                    </div>
+                    <div style="border-bottom: 2px solid var(--ink-dark); padding: 1rem 0;">
+                        <h4 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Does it cost money to apply?</h4>
+                        <p>No. The Tech-Innovation Challenge is completely free for all eligible Nigerian innovators.</p>
+                    </div>
+                    <div style="border-bottom: 2px solid var(--ink-dark); padding: 1rem 0;">
+                        <h4 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Do I need a fully functional product?</h4>
+                        <p>A Minimum Viable Product (MVP) or a strongly validated prototype is required to pass the initial screening stage.</p>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- Global Footer -->
     <footer class="site-footer">
         <div class="container footer-container">
             <div class="footer-info">
-                <h2>TICC 2026</h2>
-                <p>An NCDMB Programme</p>
-                <div class="footer-logo-block">
-                    <span style="font-size: 0.65rem; text-transform: uppercase; opacity: 0.5; font-family: var(--font-mono); display: block; letter-spacing: 1px;">Organising Partner</span>
-                    <img src="EIC_WORDMARK.png" alt="EIC Wordmark">
-                </div>
+                <img src="NCDMB-LOGO.png" alt="NCDMB Logo" style="height: 60px; margin-bottom: 1rem;">
+                <p>NCDMB Headquarters, Yenagoa, Bayelsa State</p>
             </div>
             <div class="footer-links">
                 <div class="link-group">
-                    <h4>Programme</h4>
+                    <h4>Quick Links</h4>
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="details.html">Details</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="about.html">About TIC</a></li>
+                        <li><a href="current-edition.html">Current Edition</a></li>
+                        <li><a href="programme-structure.html">Programme Structure</a></li>
                     </ul>
                 </div>
-                <div class="link-group">
-                    <h4>Connect</h4>
-                    <ul>
-                        <li><a href="contact.html">Contact Us</a></li>
-                        <li><a href="facilitators.html">Facilitators</a></li>
-                        <li><a href="#">LinkedIn</a></li>
-                    </ul>
+            </div>
+            <div class="footer-info text-center">
+                <div class="footer-logo-block">
+                    <span style="font-size: 0.65rem; text-transform: uppercase; opacity: 0.8; font-family: var(--font-mono); display: block; letter-spacing: 1px; margin-bottom: 5px;">Powered by</span>
+                    <img src="EIC_WORDMARK.png" alt="EIC Wordmark" style="height: 40px; filter: brightness(0) invert(1);">
+                </div>
+                <div style="margin-top: 1rem; display: flex; gap: 1rem; justify-content: center;">
+                    <a href="#">X</a>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">YouTube</a>
                 </div>
             </div>
         </div>
         <div class="container footer-bottom">
-            <p>&copy; 2026 Technology Innovation Challenge Competition. All rights reserved.</p>
+            <p>&copy; 2026 Tech-Innovation Challenge. All rights reserved.</p>
+            <p>A digital solution by <a href="https://productkitchen.tech/" target="_blank">Product Kitchen</a></p>
         </div>
     </footer>
     <script src="main.js"></script>

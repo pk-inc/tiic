@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programme Structure - Tech-Innovation Challenge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Global Header -->
+    <header class="site-header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="NCDMB-LOGO.png" alt="NCDMB Logo" class="logo-img">
+                    <span class="logo-full">Tech-Innovation Challenge</span>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About TIC</a></li>
+                    <li class="has-dropdown">
+                        <a href="current-edition.html">Current Edition</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="current-edition.html#overview">Overview</a></li>
+                            <li><a href="timeline.html">Timeline</a></li>
+                            <li><a href="judges-mentors.html">Judges & Mentors</a></li>
+                            <li><a href="finalists-winners.html">Finalists</a></li>
+                            <li><a href="current-edition.html#bootcamp">Bootcamp</a></li>
+                            <li><a href="current-edition.html#finals">Finals</a></li>
+                            <li><a href="news-media.html">Media Gallery</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="past-editions.html">Past Editions</a></li>
+                    <li><a href="programme-structure.html" class="nav-active">Programme Structure</a></li>
+                    <li><a href="news-media.html">News & Media</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-right" style="display: flex; align-items: center; gap: 1rem;">
+                <div style="text-align: right; line-height: 1.1; display: none;">
+                    <span style="font-size: 0.6rem; text-transform: uppercase; font-family: var(--font-mono); display: block;">Powered by</span>
+                    <strong style="font-size: 0.8rem; font-family: var(--font-display);">EICL</strong>
+                </div>
+                <a href="apply.html" class="btn btn-primary cta-apply">Apply Now</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Banner -->
+        <section class="page-hero">
+            <div class="container">
+                <h1>Programme Structure</h1>
+                <p class="subtitle">The multi-stage journey from application to incubation.</p>
+            </div>
+        </section>
+
+        <!-- Structure Funnel / Timeline -->
+        <section class="journey-section">
+            <div class="container">
+                <div class="funnel-container">
+                    
+                    <div class="funnel-stage stage-1" style="text-align: left; padding: var(--spacing-md); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;">
+                        <div>
+                            <span class="stage-label" style="color: var(--gold);">Stage 1</span>
+                            <h3>Screening & Selection</h3>
+                            <p>Rigorous evaluation of all applications by our panel of experts to identify the most viable and innovative solutions.</p>
+                        </div>
+                        <div style="background: var(--ink-dark); color: var(--gold); padding: 1rem; border-radius: 4px; text-align: center; min-width: 200px; margin-top: 1rem;">
+                            <span style="display: block; font-family: var(--font-mono); font-size: 0.8rem; text-transform: uppercase;">Output</span>
+                            <strong style="font-size: 1.5rem; font-family: var(--font-display);">Top 30 Innovators</strong>
+                        </div>
+                    </div>
+
+                    <div class="funnel-stage stage-2" style="text-align: left; padding: var(--spacing-md); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;">
+                        <div>
+                            <span class="stage-label" style="color: var(--gold);">Stage 2</span>
+                            <h3>Online Pitching</h3>
+                            <p>The top 30 innovators present their solutions virtually to a judging panel, defending their technical and commercial viability.</p>
+                        </div>
+                        <div style="background: var(--ink-dark); color: var(--gold); padding: 1rem; border-radius: 4px; text-align: center; min-width: 200px; margin-top: 1rem;">
+                            <span style="display: block; font-family: var(--font-mono); font-size: 0.8rem; text-transform: uppercase;">Output</span>
+                            <strong style="font-size: 1.5rem; font-family: var(--font-display);">15 Finalists</strong>
+                        </div>
+                    </div>
+
+                    <div class="funnel-stage stage-3" style="text-align: left; padding: var(--spacing-md); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;">
+                        <div>
+                            <span class="stage-label" style="color: var(--gold);">Stage 3A</span>
+                            <h3>Mentorship Phase</h3>
+                            <p>Finalists are paired with seasoned industry professionals for one-on-one guidance to refine their business models.</p>
+                        </div>
+                        <div style="background: var(--ink-dark); color: var(--gold); padding: 1rem; border-radius: 4px; text-align: center; min-width: 200px; margin-top: 1rem;">
+                            <span style="display: block; font-family: var(--font-mono); font-size: 0.8rem; text-transform: uppercase;">Output</span>
+                            <strong style="font-size: 1.2rem; font-family: var(--font-display);">Bootcamp Readiness</strong>
+                        </div>
+                    </div>
+
+                    <div class="funnel-stage stage-4" style="text-align: left; padding: var(--spacing-md); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;">
+                        <div>
+                            <span class="stage-label" style="color: var(--gold);">Stage 3B</span>
+                            <h3>The Bootcamp</h3>
+                            <p>An immersive, intensive physical accelerator program focusing on rapid capability building and final pitch preparation.</p>
+                        </div>
+                        <div style="background: var(--ink-dark); color: var(--gold); padding: 1rem; border-radius: 4px; text-align: center; min-width: 200px; margin-top: 1rem;">
+                            <span style="display: block; font-family: var(--font-mono); font-size: 0.8rem; text-transform: uppercase;">Output</span>
+                            <strong style="font-size: 1.2rem; font-family: var(--font-display);">Pitch Readiness</strong>
+                        </div>
+                    </div>
+
+                    <div class="funnel-stage stage-5" style="text-align: left; padding: var(--spacing-md); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; background-color: var(--gold); border-color: var(--gold);">
+                        <div style="color: var(--ink-dark);">
+                            <span class="stage-label" style="color: var(--ink-dark);">Stage 4</span>
+                            <h3 style="color: var(--ink-dark);">Grand Finale</h3>
+                            <p>The ultimate showdown at the NCDMB Headquarters. Finalists pitch live to investors, industry leaders, and the ERIN Committee.</p>
+                        </div>
+                        <div style="background: var(--ink-dark); color: var(--gold); padding: 1rem; border-radius: 4px; text-align: center; min-width: 200px; margin-top: 1rem;">
+                            <span style="display: block; font-family: var(--font-mono); font-size: 0.8rem; text-transform: uppercase;">Output</span>
+                            <strong style="font-size: 1.5rem; font-family: var(--font-display);">Winner Selection</strong>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Incubation -->
+        <section class="about-section" style="background-color: var(--bg-paper);">
+            <div class="container text-center">
+                <h2>Post-Competition Incubation</h2>
+                <p class="section-lead" style="margin: 0 auto 2rem;">The journey doesn't end at the finals. Winning teams enter an exclusive incubation program designed to transition prototypes into fully commercialized, market-ready enterprises.</p>
+                <div class="benefits-grid" style="border-top: none;">
+                    <div class="benefit-card" style="border: 2px solid var(--ink-dark); padding: 2rem;">
+                        <h3>Funding Support</h3>
+                        <p>Access to seed capital and venture grants to finance initial operations and scale technology deployment.</p>
+                    </div>
+                    <div class="benefit-card" style="border: 2px solid var(--ink-dark); padding: 2rem;">
+                        <h3>Scale Support</h3>
+                        <p>Market linkage facilitation, providing direct entry into the supply chains of major energy corporations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-info">
+                <img src="NCDMB-LOGO.png" alt="NCDMB Logo" style="height: 60px; margin-bottom: 1rem;">
+                <p>NCDMB Headquarters, Yenagoa, Bayelsa State</p>
+            </div>
+            <div class="footer-links">
+                <div class="link-group">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About TIC</a></li>
+                        <li><a href="current-edition.html">Current Edition</a></li>
+                        <li><a href="programme-structure.html">Programme Structure</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-info text-center">
+                <div class="footer-logo-block">
+                    <span style="font-size: 0.65rem; text-transform: uppercase; opacity: 0.8; font-family: var(--font-mono); display: block; letter-spacing: 1px; margin-bottom: 5px;">Powered by</span>
+                    <img src="EIC_WORDMARK.png" alt="EIC Wordmark" style="height: 40px; filter: brightness(0) invert(1);">
+                </div>
+                <div style="margin-top: 1rem; display: flex; gap: 1rem; justify-content: center;">
+                    <a href="#">X</a>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">YouTube</a>
+                </div>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Tech-Innovation Challenge. All rights reserved.</p>
+            <p>A digital solution by <a href="https://productkitchen.tech/" target="_blank">Product Kitchen</a></p>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>

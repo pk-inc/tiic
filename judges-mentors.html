@@ -3,11 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery - TICC 2026</title>
+    <title>Judges &amp; Mentors - Tech-Innovation Challenge</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .person-card {
+            border: 2px solid var(--ink-dark);
+            padding: 2rem;
+            text-align: center;
+            background: var(--bg-paper);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .person-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 4px 4px 0 var(--ink-dark);
+        }
+        .person-avatar {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background-color: var(--ink-dark);
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            font-family: var(--font-display);
+            font-size: 2rem;
+        }
+        .person-card h3 { font-size: 1.25rem; margin-bottom: 0.25rem; }
+        .person-card .role { font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent); text-transform: uppercase; margin-bottom: 0.5rem; display: block; }
+        .person-card .org { font-family: var(--font-mono); font-size: 0.8rem; opacity: 0.7; }
+    </style>
 </head>
 <body>
     <header class="site-header">
@@ -23,11 +52,11 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About TIC</a></li>
                     <li class="has-dropdown">
-                        <a href="current-edition.html">Current Edition</a>
+                        <a href="current-edition.html" class="nav-active">Current Edition</a>
                         <ul class="dropdown-menu">
                             <li><a href="current-edition.html#overview">Overview</a></li>
-                            <li><a href="timeline.html">Timeline</a></li>
-                            <li><a href="judges-mentors.html">Judges & Mentors</a></li>
+                            <li><a href="current-edition.html">Timeline</a></li>
+                            <li><a href="judges-mentors.html">Judges &amp; Mentors</a></li>
                             <li><a href="finalists-winners.html">Finalists</a></li>
                             <li><a href="current-edition.html#bootcamp">Bootcamp</a></li>
                             <li><a href="current-edition.html#finals">Finals</a></li>
@@ -36,58 +65,80 @@
                     </li>
                     <li><a href="past-editions.html">Past Editions</a></li>
                     <li><a href="programme-structure.html">Programme Structure</a></li>
-                    <li><a href="news-media.html">News & Media</a></li>
+                    <li><a href="news-media.html">News &amp; Media</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
             <div class="header-right" style="display: flex; align-items: center; gap: 1rem;">
-                <div style="text-align: right; line-height: 1.1; display: none;">
-                    <span style="font-size: 0.6rem; text-transform: uppercase; font-family: var(--font-mono); display: block;">Powered by</span>
-                    <strong style="font-size: 0.8rem; font-family: var(--font-display);">EICL</strong>
-                </div>
                 <a href="apply.html" class="btn btn-primary cta-apply">Apply Now</a>
             </div>
         </div>
     </header>
 
     <main>
-        <section class="gallery-section">
+        <section class="page-hero">
+            <div class="container">
+                <h1>Judges &amp; Mentors</h1>
+                <p class="subtitle">Industry leaders, experts, and innovators shaping TIC 2026.</p>
+            </div>
+        </section>
+
+        <section class="about-section">
             <div class="container">
                 <div class="section-header">
-                    <h2>The Ecosystem</h2>
-                    <p class="section-lead">A glimpse into the Entrepreneurship & Innovation Centre and past events.</p>
+                    <h2>Judges</h2>
+                    <p class="section-lead">Our panel of judges brings decades of experience across the energy, technology, and investment sectors.</p>
                 </div>
-                
-                <div class="gallery-grid">
-                    <!-- Placeholders for gallery items -->
-                    <div class="gallery-item">
-                        <span class="gallery-placeholder-text">Image 01</span>
+                <div class="benefits-grid">
+                    <div class="person-card">
+                        <div class="person-avatar">J</div>
+                        <h3>To Be Announced</h3>
+                        <span class="role">Judge</span>
+                        <p class="org">NCDMB / Energy Sector</p>
                     </div>
-                    <div class="gallery-item">
-                        <span class="gallery-placeholder-text">Image 02</span>
+                    <div class="person-card">
+                        <div class="person-avatar">J</div>
+                        <h3>To Be Announced</h3>
+                        <span class="role">Judge</span>
+                        <p class="org">NCDMB / Energy Sector</p>
                     </div>
-                    <div class="gallery-item">
-                        <span class="gallery-placeholder-text">Image 03</span>
-                    </div>
-                    <div class="gallery-item">
-                        <span class="gallery-placeholder-text">Image 04</span>
-                    </div>
-                    <div class="gallery-item">
-                        <span class="gallery-placeholder-text">Image 05</span>
-                    </div>
-                    <div class="gallery-item">
-                        <span class="gallery-placeholder-text">Image 06</span>
+                    <div class="person-card">
+                        <div class="person-avatar">J</div>
+                        <h3>To Be Announced</h3>
+                        <span class="role">Judge</span>
+                        <p class="org">NCDMB / Energy Sector</p>
                     </div>
                 </div>
             </div>
         </section>
-        
-        <section class="final-cta-section">
-            <div class="container text-center">
-                <h2>Join the Next Cohort</h2>
-                <div class="cta-group">
-                    <a href="apply.html" class="btn btn-primary btn-large">Apply Now</a>
+
+        <section class="pillars-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Mentors</h2>
+                    <p class="section-lead">Our mentors will provide hands-on guidance to the top 15 finalists throughout the programme.</p>
                 </div>
+                <div class="benefits-grid">
+                    <div class="person-card">
+                        <div class="person-avatar">M</div>
+                        <h3>To Be Announced</h3>
+                        <span class="role">Mentor</span>
+                        <p class="org">Industry Expert</p>
+                    </div>
+                    <div class="person-card">
+                        <div class="person-avatar">M</div>
+                        <h3>To Be Announced</h3>
+                        <span class="role">Mentor</span>
+                        <p class="org">Industry Expert</p>
+                    </div>
+                    <div class="person-card">
+                        <div class="person-avatar">M</div>
+                        <h3>To Be Announced</h3>
+                        <span class="role">Mentor</span>
+                        <p class="org">Industry Expert</p>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 2rem; font-family: var(--font-mono); opacity: 0.6;">Full profiles will be announced as the programme progresses.</p>
             </div>
         </section>
     </main>

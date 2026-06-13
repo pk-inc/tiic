@@ -3,191 +3,247 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TICC 2026 - Technology Innovation Challenge Competition</title>
-    <!-- Google Fonts -->
+    <title>Tech-Innovation Challenge (TIC) - NCDMB</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Using Oswald for the bold/grotesque display face and IBM Plex Mono for utility/numbers -->
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Global Header -->
     <header class="site-header">
         <div class="container header-container">
             <div class="logo">
                 <a href="index.html">
                     <img src="NCDMB-LOGO.png" alt="NCDMB Logo" class="logo-img">
-                    <span class="logo-full">Technology Innovation Challenge Competition</span>
+                    <span class="logo-full">Tech-Innovation Challenge</span>
                 </a>
             </div>
             <nav class="main-nav">
                 <ul>
                     <li><a href="index.html" class="nav-active">Home</a></li>
-                    <li><a href="details.html">Details</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="facilitators.html">Facilitators</a></li>
+                    <li><a href="about.html">About TIC</a></li>
+                    <li class="has-dropdown">
+                        <a href="current-edition.html">Current Edition</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="current-edition.html#overview">Overview</a></li>
+                            <li><a href="timeline.html">Timeline</a></li>
+                            <li><a href="judges-mentors.html">Judges & Mentors</a></li>
+                            <li><a href="finalists-winners.html">Finalists</a></li>
+                            <li><a href="current-edition.html#bootcamp">Bootcamp</a></li>
+                            <li><a href="current-edition.html#finals">Finals</a></li>
+                            <li><a href="news-media.html">Media Gallery</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="past-editions.html">Past Editions</a></li>
+                    <li><a href="programme-structure.html">Programme Structure</a></li>
+                    <li><a href="news-media.html">News & Media</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
-            <a href="apply.html" class="btn btn-primary cta-apply">Apply Now</a>
+            <div class="header-right" style="display: flex; align-items: center; gap: 1rem;">
+                <div style="text-align: right; line-height: 1.1; display: none;">
+                    <span style="font-size: 0.6rem; text-transform: uppercase; font-family: var(--font-mono); display: block;">Powered by</span>
+                    <strong style="font-size: 0.8rem; font-family: var(--font-display);">EICL</strong>
+                </div>
+                <a href="apply.html" class="btn btn-primary cta-apply">Apply Now</a>
+            </div>
         </div>
     </header>
 
     <main>
+        <!-- Hero Section -->
         <section class="hero">
             <div class="container hero-container">
-                <h2 class="hero-title">Innovate.<br>Build.<br>Scale.</h2>
-                <p class="hero-subtitle">The Maiden Edition of a national technology challenge in Nigeria. An NCDMB programme featuring workshops and exhibitions. Grand Finale: December 21, 2026 at the Local Content Towers, Yenagoa.</p>
+                <h2 class="hero-title">Tech-Innovation<br>Challenge (TIC)</h2>
+                <p class="hero-subtitle">A flagship initiative of the Nigerian Content Development &amp; Monitoring Board (NCDMB) designed to accelerate technology-driven innovation for Nigeria's energy future.</p>
+                <div style="background-color: rgba(255, 255, 255, 0.1); padding: 1rem; display: inline-block; border: 1px solid var(--gold); margin-bottom: 2rem;">
+                    <span style="font-family: var(--font-mono); color: var(--gold); text-transform: uppercase; font-weight: 600;">Pitching Begins In:</span>
+                    <span style="font-family: var(--font-display); font-size: 1.5rem; margin-left: 10px; color: var(--bg-paper);">45 Days</span>
+                </div>
                 <div class="hero-actions">
-                    <a href="apply.html" class="btn btn-primary">Apply Now</a>
-                    <a href="details.html" class="btn btn-secondary">Learn More</a>
+                    <a href="apply.html" class="btn btn-primary btn-large">Apply Now</a>
+                    <a href="current-edition.html" class="btn btn-secondary btn-large">Explore TIC 2026</a>
                 </div>
             </div>
         </section>
 
-        <section id="about" class="about-section">
+        <!-- Quick Access Cards -->
+        <section class="quick-access-section" style="padding: var(--spacing-md) 0;">
             <div class="container">
-                <div class="section-header">
-                    <h2>About TICC</h2>
-                    <p class="section-lead">The Technology Innovation Challenge Competition (TICC) is a premium NCDMB program, organized in partnership with the Energy Researches Innovators Network (ERIN) Committee and partner organisations. As the maiden edition, TICC 2026 is designed to discover, accelerate, and elevate Nigeria's most promising technology solutions through intensive technical workshops, technology exhibitions, and direct engagement with leading industry experts.</p>
-                </div>
-                <div class="benefits-grid">
-                    <div class="benefit-card">
-                        <h3>Industry Experts</h3>
-                        <p>Direct engagement, vetting, and feedback from top-tier industry experts and mentors.</p>
-                    </div>
-                    <div class="benefit-card">
-                        <h3>NCDMB Support</h3>
-                        <p>A flagship NCDMB program offering unmatched market linkages and strategic local content support.</p>
-                    </div>
-                    <div class="benefit-card">
-                        <h3>Maiden Cohort</h3>
-                        <p>Be part of the historic first cohort laying the blueprint for Nigerian technology scaling.</p>
-                    </div>
+                <div class="quick-access-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;">
+                    <a href="current-edition.html" class="benefit-card" style="background: var(--bg-paper); border: 2px solid var(--ink-dark); padding: 1.5rem; text-align: center; transition: transform 0.2s; display: block;">
+                        <h3 style="font-size: 1.1rem;">Programme Timeline</h3>
+                        <p style="font-size: 0.85rem; margin: 0;">View key dates and milestones.</p>
+                    </a>
+                    <a href="current-edition.html#overview" class="benefit-card" style="background: var(--bg-paper); border: 2px solid var(--ink-dark); padding: 1.5rem; text-align: center; transition: transform 0.2s; display: block;">
+                        <h3 style="font-size: 1.1rem;">Meet the Finalists</h3>
+                        <p style="font-size: 0.85rem; margin: 0;">Discover top innovations.</p>
+                    </a>
+                    <a href="#" class="benefit-card" style="background: var(--bg-paper); border: 2px solid var(--ink-dark); padding: 1.5rem; text-align: center; transition: transform 0.2s; display: block;">
+                        <h3 style="font-size: 1.1rem;">Join ERIN</h3>
+                        <p style="font-size: 0.85rem; margin: 0;">Become part of the community.</p>
+                    </a>
+                    <a href="#" class="benefit-card" style="background: var(--bg-paper); border: 2px solid var(--ink-dark); padding: 1.5rem; text-align: center; transition: transform 0.2s; display: block;">
+                        <h3 style="font-size: 1.1rem;">Download Guide</h3>
+                        <p style="font-size: 0.85rem; margin: 0;">Get the TIC 2026 brochure.</p>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <section id="vision-mission" class="vision-mission-section">
+        <!-- About TIC Section -->
+        <section id="about" class="about-section" style="margin-top: 2rem;">
             <div class="container">
                 <div class="vm-grid">
-                    <div class="vision">
-                        <h2>Vision</h2>
-                        <p>To establish a sustainable pipeline of high-impact technology ventures that strengthen local content and drive national economic and energy transformation.</p>
+                    <div>
+                        <h2>About TIC</h2>
+                        <p class="section-lead">The Tech-Innovation Challenge (TIC) is a premium NCDMB program, organized to discover, accelerate, and elevate Nigeria's most promising technology solutions. Through intensive technical workshops, technology exhibitions, and direct engagement with leading industry experts, TIC bridges the gap between local innovators and energy industry demands.</p>
+                        <a href="about.html" class="btn btn-outline" style="margin-top: 1rem;">Learn More About TIC</a>
                     </div>
-                    <div class="mission">
-                        <h2>Mission</h2>
-                        <p>To rigorously identify, equip, and accelerate the growth of exceptional local innovators by engaging industry experts through structured, challenge-based competition.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="pillars" class="pillars-section">
-            <div class="container">
-                <h2>Why TICC</h2>
-                <div class="pillars-list">
-                    <div class="pillar">
-                        <h3>Rigorous Selection</h3>
-                        <p>A transparent, merit-based screening system to identify high-potential local content solutions.</p>
-                    </div>
-                    <div class="pillar">
-                        <h3>ERIN Committee</h3>
-                        <p>Steered by the Energy Researches Innovators Network to align innovations with industry demands.</p>
-                    </div>
-                    <div class="pillar">
-                        <h3>Workshops &amp; Exhibitions</h3>
-                        <p>Accelerate your growth through technical workshops and showcase your solutions at the TICC national exhibition.</p>
+                    <div style="background-color: var(--ink-dark); border: 2px solid var(--gold); display: flex; align-items: center; justify-content: center; min-height: 250px;">
+                        <span style="color: var(--gold); font-family: var(--font-mono);">[NCDMB Tower Visual Placeholder]</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="message" class="message-section">
-            <div class="container">
-                <div class="message-box">
-                    <h2>Maiden Edition Finals</h2>
-                    <blockquote class="eic-quote">
-                        "The grand finale of the Technology Innovation Challenge Competition will hold on December 21, 2026 at the Local Content Towers—the national headquarters of the Nigerian Content Development and Monitoring Board (NCDMB) located at Ox-bow Lake, Yenagoa, Bayelsa State."
-                    </blockquote>
-                    <cite>- TICC ERIN Committee</cite>
-                </div>
-            </div>
-        </section>
-
-        <section class="sponsors-section">
-            <div class="container sponsors-container">
-                <div class="sponsors-header">
-                    <h2>Sponsors & Partners</h2>
-                    <p>Unlocking Nigerian technological capability under the principal sponsorship of NCDMB.</p>
-                </div>
-                <div class="sponsors-grid">
-                    <div class="sponsor-card principal">
-                        <span class="sponsor-tag">Principal Sponsor</span>
-                        <h3>NCDMB</h3>
-                        <p>Nigerian Content Development and Monitoring Board</p>
-                    </div>
-                    <div class="partners-subgrid">
-                        <div class="sponsor-card partner">
-                            <h4>ERIN Committee</h4>
-                            <p style="font-size: 0.8rem; margin-top: 5px; font-family: var(--font-mono);">Energy Researches Innovators Network</p>
-                        </div>
-                        <div class="sponsor-card partner">
-                            <h4>Partner Spot 01</h4>
-                            <p style="font-size: 0.8rem; margin-top: 5px; font-family: var(--font-mono);">Open for Sponsorship</p>
-                        </div>
-                        <div class="sponsor-card partner">
-                            <h4>Partner Spot 02</h4>
-                            <p style="font-size: 0.8rem; margin-top: 5px; font-family: var(--font-mono);">Open for Collaboration</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="apply" class="final-cta-section">
+        <!-- Programme Phases -->
+        <section class="journey-section">
             <div class="container text-center">
-                <h2>Ready to Build?</h2>
-                <p>Applications for the TICC 2026 maiden cohort close soon.</p>
-                <div class="cta-group">
-                    <a href="apply.html" class="btn btn-primary btn-large">Apply Now</a>
-                    <a href="contact.html" class="btn btn-outline">Become a Partner</a>
+                <h2>Programme Phases</h2>
+                <p class="section-lead" style="margin: 0 auto 2rem;">The 7 steps to commercializing your innovation.</p>
+                <div class="fe-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); text-align: left;">
+                    
+                    <div class="benefit-card" style="background: var(--bg-paper); color: var(--ink-dark); border: 2px solid var(--gold); padding: 1.5rem;">
+                        <span style="font-family: var(--font-mono); color: var(--accent); font-weight: bold; display: block; margin-bottom: 0.5rem;">01</span>
+                        <h3>Mobilisation</h3>
+                        <p style="font-size: 0.9rem;">Nationwide call for applications from tech innovators.</p>
+                        <a href="programme-structure.html" style="font-family: var(--font-mono); font-size: 0.8rem; text-transform: uppercase; color: var(--ink-dark); text-decoration: underline;">View Details</a>
+                    </div>
+                    <div class="benefit-card" style="background: var(--bg-paper); color: var(--ink-dark); border: 2px solid var(--gold); padding: 1.5rem;">
+                        <span style="font-family: var(--font-mono); color: var(--accent); font-weight: bold; display: block; margin-bottom: 0.5rem;">02</span>
+                        <h3>Screening</h3>
+                        <p style="font-size: 0.9rem;">Expert review to select the top 30 viable solutions.</p>
+                        <a href="programme-structure.html" style="font-family: var(--font-mono); font-size: 0.8rem; text-transform: uppercase; color: var(--ink-dark); text-decoration: underline;">View Details</a>
+                    </div>
+                    <div class="benefit-card" style="background: var(--bg-paper); color: var(--ink-dark); border: 2px solid var(--gold); padding: 1.5rem;">
+                        <span style="font-family: var(--font-mono); color: var(--accent); font-weight: bold; display: block; margin-bottom: 0.5rem;">03</span>
+                        <h3>Pitching</h3>
+                        <p style="font-size: 0.9rem;">Virtual pitches to identify the top 15 finalists.</p>
+                        <a href="programme-structure.html" style="font-family: var(--font-mono); font-size: 0.8rem; text-transform: uppercase; color: var(--ink-dark); text-decoration: underline;">View Details</a>
+                    </div>
+                    <div class="benefit-card" style="background: var(--bg-paper); color: var(--ink-dark); border: 2px solid var(--gold); padding: 1.5rem;">
+                        <span style="font-family: var(--font-mono); color: var(--accent); font-weight: bold; display: block; margin-bottom: 0.5rem;">04</span>
+                        <h3>Mentorship</h3>
+                        <p style="font-size: 0.9rem;">One-on-one industry guidance and solution refinement.</p>
+                        <a href="programme-structure.html" style="font-family: var(--font-mono); font-size: 0.8rem; text-transform: uppercase; color: var(--ink-dark); text-decoration: underline;">View Details</a>
+                    </div>
+                    <div class="benefit-card" style="background: var(--bg-paper); color: var(--ink-dark); border: 2px solid var(--gold); padding: 1.5rem;">
+                        <span style="font-family: var(--font-mono); color: var(--accent); font-weight: bold; display: block; margin-bottom: 0.5rem;">05</span>
+                        <h3>Bootcamp</h3>
+                        <p style="font-size: 0.9rem;">Intensive preparation for the grand finale.</p>
+                        <a href="programme-structure.html" style="font-family: var(--font-mono); font-size: 0.8rem; text-transform: uppercase; color: var(--ink-dark); text-decoration: underline;">View Details</a>
+                    </div>
+                    <div class="benefit-card" style="background: var(--bg-paper); color: var(--ink-dark); border: 2px solid var(--gold); padding: 1.5rem;">
+                        <span style="font-family: var(--font-mono); color: var(--accent); font-weight: bold; display: block; margin-bottom: 0.5rem;">06</span>
+                        <h3>Finals</h3>
+                        <p style="font-size: 0.9rem;">Live presentation to investors and NCDMB leadership.</p>
+                        <a href="programme-structure.html" style="font-family: var(--font-mono); font-size: 0.8rem; text-transform: uppercase; color: var(--ink-dark); text-decoration: underline;">View Details</a>
+                    </div>
+                    <div class="benefit-card" style="background: var(--bg-paper); color: var(--ink-dark); border: 2px solid var(--gold); padding: 1.5rem;">
+                        <span style="font-family: var(--font-mono); color: var(--accent); font-weight: bold; display: block; margin-bottom: 0.5rem;">07</span>
+                        <h3>Incubation</h3>
+                        <p style="font-size: 0.9rem;">Post-competition funding and scaling support.</p>
+                        <a href="programme-structure.html" style="font-family: var(--font-mono); font-size: 0.8rem; text-transform: uppercase; color: var(--ink-dark); text-decoration: underline;">View Details</a>
+                    </div>
+
                 </div>
             </div>
         </section>
+
+        <!-- Featured News Section -->
+        <section class="about-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Featured News</h2>
+                </div>
+                <div class="fe-grid">
+                    <div class="benefit-card" style="border: 1px solid rgba(0, 51, 26, 0.2); padding: 1rem;">
+                        <div style="background: var(--ink-dark); height: 150px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; color: var(--bg-paper); font-family: var(--font-mono);">[Image]</div>
+                        <h3 style="font-size: 1.25rem;">NCDMB Launches TIC 2026</h3>
+                        <p style="font-size: 0.9rem;">The maiden edition of the Tech-Innovation Challenge officially opens for applications nationwide.</p>
+                        <a href="news-media.html" style="color: var(--accent); font-family: var(--font-mono); font-size: 0.85rem; text-transform: uppercase;">Read More</a>
+                    </div>
+                    <div class="benefit-card" style="border: 1px solid rgba(0, 51, 26, 0.2); padding: 1rem;">
+                        <div style="background: var(--ink-dark); height: 150px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; color: var(--bg-paper); font-family: var(--font-mono);">[Image]</div>
+                        <h3 style="font-size: 1.25rem;">Meet the ERIN Committee</h3>
+                        <p style="font-size: 0.9rem;">Experts from across the energy sector unite to evaluate Nigeria's most promising innovations.</p>
+                        <a href="news-media.html" style="color: var(--accent); font-family: var(--font-mono); font-size: 0.85rem; text-transform: uppercase;">Read More</a>
+                    </div>
+                    <div class="benefit-card" style="border: 1px solid rgba(0, 51, 26, 0.2); padding: 1rem;">
+                        <div style="background: var(--ink-dark); height: 150px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; color: var(--bg-paper); font-family: var(--font-mono);">[Image]</div>
+                        <h3 style="font-size: 1.25rem;">Grand Finale Date Announced</h3>
+                        <p style="font-size: 0.9rem;">Mark your calendars for December 21 at the Local Content Towers in Yenagoa.</p>
+                        <a href="news-media.html" style="color: var(--accent); font-family: var(--font-mono); font-size: 0.85rem; text-transform: uppercase;">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Partners Section -->
+        <section class="sponsors-section">
+            <div class="container text-center">
+                <h2>Partners</h2>
+                <div style="display: flex; justify-content: center; align-items: center; gap: 3rem; margin-top: 2rem; flex-wrap: wrap;">
+                    <div style="text-align: center;">
+                        <span style="font-family: var(--font-mono); font-size: 0.8rem; text-transform: uppercase; color: var(--ink-dark); display: block; margin-bottom: 10px;">Programme Owner</span>
+                        <img src="NCDMB-LOGO.png" alt="NCDMB" style="height: 80px;">
+                    </div>
+                    <div style="text-align: center;">
+                        <span style="font-family: var(--font-mono); font-size: 0.8rem; text-transform: uppercase; color: var(--ink-dark); display: block; margin-bottom: 10px;">Implementation Partner</span>
+                        <img src="EIC_WORDMARK.png" alt="EICL" style="height: 60px;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
+    <!-- Global Footer -->
     <footer class="site-footer">
         <div class="container footer-container">
             <div class="footer-info">
-                <h2>TICC 2026</h2>
-                <p>An NCDMB Programme</p>
-                <div class="footer-logo-block">
-                    <span style="font-size: 0.65rem; text-transform: uppercase; opacity: 0.5; font-family: var(--font-mono); display: block; letter-spacing: 1px;">Organising Partner</span>
-                    <img src="EIC_WORDMARK.png" alt="EIC Wordmark">
-                </div>
+                <img src="NCDMB-LOGO.png" alt="NCDMB Logo" style="height: 60px; margin-bottom: 1rem;">
+                <p>NCDMB Headquarters, Yenagoa, Bayelsa State</p>
             </div>
             <div class="footer-links">
                 <div class="link-group">
-                    <h4>Programme</h4>
+                    <h4>Quick Links</h4>
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="details.html">Details</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="about.html">About TIC</a></li>
+                        <li><a href="current-edition.html">Current Edition</a></li>
+                        <li><a href="programme-structure.html">Programme Structure</a></li>
                     </ul>
                 </div>
-                <div class="link-group">
-                    <h4>Connect</h4>
-                    <ul>
-                        <li><a href="contact.html">Contact Us</a></li>
-                        <li><a href="facilitators.html">Facilitators</a></li>
-                        <li><a href="#">LinkedIn</a></li>
-                    </ul>
+            </div>
+            <div class="footer-info text-center">
+                <div class="footer-logo-block">
+                    <span style="font-size: 0.65rem; text-transform: uppercase; opacity: 0.8; font-family: var(--font-mono); display: block; letter-spacing: 1px; margin-bottom: 5px;">Powered by</span>
+                    <img src="EIC_WORDMARK.png" alt="EIC Wordmark" style="height: 40px; filter: brightness(0) invert(1);">
+                </div>
+                <div style="margin-top: 1rem; display: flex; gap: 1rem; justify-content: center;">
+                    <a href="#">X</a>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">YouTube</a>
                 </div>
             </div>
         </div>
         <div class="container footer-bottom">
-            <p>&copy; 2026 Technology Innovation Challenge Competition. All rights reserved.</p>
+            <p>&copy; 2026 Tech-Innovation Challenge. All rights reserved.</p>
+            <p>A digital solution by <a href="https://productkitchen.tech/" target="_blank">Product Kitchen</a></p>
         </div>
     </footer>
     <script src="main.js"></script>

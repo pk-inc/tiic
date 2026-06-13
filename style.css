@@ -12,10 +12,12 @@
 
 :root {
     --bg-paper: #F5EFE6;
-    --ink-dark: #113824;
-    --ink-light: #2A5A41;
+    --ink-dark: #00331A; /* NCDMB darker green */
+    --ink-light: #008040; /* NCDMB primary green */
     --accent: #CC4024;
     --accent-hover: #A63018;
+    --gold: #D4AF37;
+    --gold-hover: #B5952F;
     
     --font-display: 'Oswald', sans-serif;
     --font-mono: 'IBM Plex Mono', monospace;
@@ -25,6 +27,12 @@
     --spacing-md: 2rem;
     --spacing-lg: 4rem;
     --spacing-xl: 6rem;
+}
+
+html {
+    /* Force scrollbar always visible to prevent layout shift between pages */
+    overflow-y: scroll;
+    scroll-behavior: smooth;
 }
 
 * {
@@ -84,6 +92,12 @@ section:last-of-type {
     border-bottom: none;
 }
 
+/* Prevent the .container class from adding padding inside the header
+   since .header-container already defines its own padding */
+.site-header .container {
+    padding: 0;
+}
+
 /* Buttons */
 .btn {
     display: inline-block;
@@ -96,6 +110,15 @@ section:last-of-type {
     cursor: pointer;
     transition: all 0.2s;
 }
+
+.cta-apply {
+    font-size: 0.75rem !important;
+    padding: 0.4rem 1rem !important;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
 
 .btn-primary {
     background-color: var(--accent);
@@ -137,17 +160,23 @@ section:last-of-type {
 /* Header */
 .site-header {
     border-bottom: 2px solid var(--ink-dark);
-    padding: var(--spacing-sm) 0;
+    padding: 0.75rem 0;
     position: sticky;
     top: 0;
     background-color: var(--bg-paper);
-    z-index: 100;
+    z-index: 300;
 }
 
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1.5rem;
+    /* Standardize padding so it never shifts */
+    padding: 0 var(--spacing-md);
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .logo a {
@@ -183,8 +212,13 @@ section:last-of-type {
 
 .main-nav ul {
     display: flex;
-    gap: var(--spacing-md);
+    gap: 1.5rem;
     align-items: center;
+    list-style: none;
+}
+
+.main-nav > ul > li {
+    position: relative;
 }
 
 .main-nav a {
@@ -195,42 +229,112 @@ section:last-of-type {
     position: relative;
     padding-bottom: 4px;
     color: var(--ink-dark);
+    white-space: nowrap;
 }
 
-/* Active page indicator */
-.main-nav a.nav-active {
-    color: var(--ink-dark);
-}
-
-.main-nav a.nav-active::after {
+/* Active page indicator — only on top-level nav links */
+.main-nav > ul > li > a.nav-active::after,
+.main-nav > ul > li > a:hover::after {
     content: '';
     position: absolute;
     bottom: -2px;
     left: 0;
     right: 0;
     height: 2px;
-    background-color: var(--accent);
+    background-color: var(--gold);
+}
+
+/* Dropdown Menu — hidden by default, shown on hover */
+.has-dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    background-color: var(--bg-paper);
+    min-width: 220px;
+    border: 2px solid var(--ink-dark);
+    border-top: 3px solid var(--gold);
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    z-index: 500;
+    transition: opacity 0.15s ease, visibility 0.15s ease;
+    box-shadow: 4px 4px 0 rgba(0,51,26,0.15);
+}
+
+.has-dropdown:hover .dropdown-menu,
+.has-dropdown:focus-within .dropdown-menu {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.dropdown-menu li {
+    width: 100%;
+    list-style: none;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 0.6rem 1rem;
+    font-size: 0.8rem;
+    border-bottom: 1px solid rgba(0, 51, 26, 0.1);
+    white-space: nowrap;
+    color: var(--ink-dark);
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    position: static;
+}
+
+.dropdown-menu a::after {
+    display: none !important;
+}
+
+.dropdown-menu a:hover {
+    background-color: rgba(212, 175, 55, 0.15);
+    color: var(--ink-dark);
+}
+
+.dropdown-menu li:last-child a {
+    border-bottom: none;
 }
 
 /* Hero Section */
 .hero {
-    padding: calc(var(--spacing-xl) * 1.5) 0;
+    /* Reduced padding so title shows above the fold without scrolling */
+    padding: var(--spacing-xl) 0 var(--spacing-lg);
     background-color: var(--ink-dark);
     color: var(--bg-paper);
     border-bottom: none;
+    min-height: calc(100vh - 72px);
+    display: flex;
+    align-items: center;
+}
+
+.hero-container {
+    width: 100%;
 }
 
 .hero .hero-title {
-    font-size: clamp(4rem, 8vw, 8rem);
+    /* Tighter font-size so the whole title shows above fold */
+    font-size: clamp(3rem, 6vw, 6rem);
     color: var(--bg-paper);
     margin-bottom: var(--spacing-md);
+    line-height: 1.0;
 }
 
 .hero .hero-subtitle {
-    font-size: 1.25rem;
-    max-width: 600px;
-    margin-bottom: var(--spacing-lg);
+    font-size: 1.1rem;
+    max-width: 560px;
+    margin-bottom: var(--spacing-md);
     font-family: var(--font-mono);
+    line-height: 1.6;
 }
 
 .hero .btn-secondary {
@@ -290,6 +394,28 @@ h2 {
 .benefit-card h3, .pillar h3, .support-item h3 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
+}
+
+/* Anchor cards — when a <a> is used as a card */
+a.benefit-card {
+    display: block;
+    color: var(--ink-dark);
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+a.benefit-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 4px 4px 0 rgba(0, 51, 26, 0.2);
+    color: var(--ink-dark);
+}
+
+a.benefit-card h3 {
+    transition: color 0.2s;
+}
+
+a.benefit-card:hover h3 {
+    color: var(--accent);
 }
 
 /* Specific styling for support */
@@ -504,27 +630,72 @@ h2 {
     text-align: center;
     font-size: 0.875rem;
     opacity: 0.6;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer-bottom a {
+    color: var(--gold);
+    text-decoration: underline;
+}
+
+/* Common Header Banner for inner pages */
+.page-hero {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--ink-dark);
+    color: var(--bg-paper);
+    text-align: center;
+}
+
+.page-hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--bg-paper);
+}
+
+.page-hero .subtitle {
+    font-size: 1.25rem;
+    font-family: var(--font-mono);
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 /* Responsive */
+@media (max-width: 1100px) {
+    /* Collapse longer nav items at slightly wider breakpoint */
+    .main-nav a {
+        font-size: 0.78rem;
+    }
+
+    .quick-access-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
 @media (max-width: 900px) {
     .header-container {
         flex-wrap: wrap;
-        gap: 0.75rem;
-        padding: 0.75rem var(--spacing-md);
+        gap: 0.5rem;
+        /* Keep the same horizontal padding — no override needed */
     }
 
     .logo {
         flex: 1;
     }
 
-    /* Keep CTA visible — shrink it */
-    .cta-apply {
-        font-size: 0.8rem;
-        padding: 0.5rem 1rem;
+    .logo-full {
+        font-size: 1rem;
+        max-width: 220px;
     }
 
-    /* Nav scrolls horizontally below logo row */
+    /* Keep CTA visible — shrink it */
+    .cta-apply {
+        font-size: 0.75rem;
+        padding: 0.4rem 0.85rem;
+    }
+
+    /* Nav goes full-width below the logo row and scrolls horizontally */
     .main-nav {
         order: 3;
         width: 100%;
@@ -537,15 +708,23 @@ h2 {
         display: none;
     }
 
-    .main-nav ul {
+    .main-nav > ul {
         flex-wrap: nowrap;
         gap: 1.25rem;
         padding-bottom: 4px;
     }
 
-    .main-nav a {
-        white-space: nowrap;
-        font-size: 0.78rem;
+    /* Completely suppress the dropdown on mobile — it can't work with hover */
+    .dropdown-menu {
+        display: none !important;
+    }
+
+    .has-dropdown > a::after {
+        content: '' !important;
+    }
+
+    .header-right {
+        order: 2;
     }
 
     .vm-grid {
@@ -568,6 +747,7 @@ h2 {
 
     .funnel-stage {
         width: 100% !important;
+        flex-direction: column !important;
     }
 
     .cta-group {
@@ -597,11 +777,37 @@ h2 {
     }
 
     .fe-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .quick-access-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
     }
 
     .benefits-grid, .pillars-list, .support-grid {
         grid-template-columns: 1fr;
+    }
+
+    .page-hero h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .fe-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .quick-access-grid {
+        grid-template-columns: 1fr 1fr !important;
+    }
+
+    .footer-container {
+        text-align: center;
+    }
+
+    .footer-info img {
+        max-height: 48px;
     }
 }
 

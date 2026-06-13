@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery - TICC 2026</title>
+    <title>TIC 2026 - Current Edition</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Global Header -->
     <header class="site-header">
         <div class="container header-container">
             <div class="logo">
@@ -23,7 +24,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About TIC</a></li>
                     <li class="has-dropdown">
-                        <a href="current-edition.html">Current Edition</a>
+                        <a href="current-edition.html" class="nav-active">Current Edition</a>
                         <ul class="dropdown-menu">
                             <li><a href="current-edition.html#overview">Overview</a></li>
                             <li><a href="timeline.html">Timeline</a></li>
@@ -51,47 +52,91 @@
     </header>
 
     <main>
-        <section class="gallery-section">
+        <!-- Hero Banner -->
+        <section class="page-hero">
             <div class="container">
-                <div class="section-header">
-                    <h2>The Ecosystem</h2>
-                    <p class="section-lead">A glimpse into the Entrepreneurship & Innovation Centre and past events.</p>
+                <h1>TIC 2026 — Maiden Edition</h1>
+                <p class="subtitle">June &ndash; October 2026</p>
+            </div>
+        </section>
+
+        <!-- Sub Navigation within the page -->
+        <div style="background-color: var(--bg-paper); border-bottom: 2px solid var(--ink-dark); padding: var(--spacing-sm) 0;">
+            <div class="container">
+                <nav class="main-nav" style="justify-content: center;">
+                    <ul style="justify-content: center; flex-wrap: wrap;">
+                        <li><a href="#overview">Overview</a></li>
+                        <li><a href="timeline.html">Timeline</a></li>
+                        <li><a href="judges-mentors.html">Judges & Mentors</a></li>
+                        <li><a href="finalists-winners.html">Finalists</a></li>
+                        <li><a href="#bootcamp">Bootcamp</a></li>
+                        <li><a href="#finals">Finals</a></li>
+                        <li><a href="news-media.html">Media Gallery</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Overview Section -->
+        <section id="overview" class="about-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2>Programme Overview</h2>
+                    <p class="section-lead" style="margin: 0 auto;">The maiden edition of TIC marks a historic milestone in building Nigeria's energy technology ecosystem. Over 5 months, we will identify the most promising innovations across the country and provide them with the resources, mentorship, and platform to scale.</p>
                 </div>
                 
-                <div class="gallery-grid">
-                    <!-- Placeholders for gallery items -->
-                    <div class="gallery-item">
-                        <span class="gallery-placeholder-text">Image 01</span>
+                <div class="benefits-grid text-center" style="margin-top: var(--spacing-lg);">
+                    <div class="benefit-card">
+                        <h3 style="font-size: 3rem; color: var(--gold);">500+</h3>
+                        <p class="mono-label">Applicants</p>
                     </div>
-                    <div class="gallery-item">
-                        <span class="gallery-placeholder-text">Image 02</span>
+                    <div class="benefit-card">
+                        <h3 style="font-size: 3rem; color: var(--gold);">15</h3>
+                        <p class="mono-label">Finalists</p>
                     </div>
-                    <div class="gallery-item">
-                        <span class="gallery-placeholder-text">Image 03</span>
+                    <div class="benefit-card">
+                        <h3 style="font-size: 3rem; color: var(--gold);">20</h3>
+                        <p class="mono-label">Mentors</p>
                     </div>
-                    <div class="gallery-item">
-                        <span class="gallery-placeholder-text">Image 04</span>
-                    </div>
-                    <div class="gallery-item">
-                        <span class="gallery-placeholder-text">Image 05</span>
-                    </div>
-                    <div class="gallery-item">
-                        <span class="gallery-placeholder-text">Image 06</span>
+                    <div class="benefit-card">
+                        <h3 style="font-size: 3rem; color: var(--gold);">5</h3>
+                        <p class="mono-label">Judges</p>
                     </div>
                 </div>
             </div>
         </section>
-        
-        <section class="final-cta-section">
+
+        <!-- Bootcamp Preview -->
+        <section id="bootcamp" class="journey-section">
+            <div class="container">
+                <div class="vm-grid">
+                    <div>
+                        <h2>The TIC Bootcamp</h2>
+                        <p>A rigorous 2-week intensive accelerator where the top 15 finalists will refine their technical solutions, business models, and pitching skills under the guidance of elite industry experts.</p>
+                        <a href="programme-structure.html" class="btn btn-outline" style="margin-top: 1rem;">View Structure</a>
+                    </div>
+                    <div style="background-color: var(--bg-paper); min-height: 200px; display: flex; align-items: center; justify-content: center; border: 2px solid var(--ink-dark);">
+                        <span style="color: var(--ink-dark); font-family: var(--font-mono);">[Bootcamp Graphic Placeholder]</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Finals Preview -->
+        <section id="finals" class="about-section">
             <div class="container text-center">
-                <h2>Join the Next Cohort</h2>
-                <div class="cta-group">
-                    <a href="apply.html" class="btn btn-primary btn-large">Apply Now</a>
+                <h2>The Grand Finale</h2>
+                <div class="message-box" style="display: inline-block; text-align: left; margin-top: var(--spacing-md);">
+                    <p style="font-family: var(--font-mono); color: var(--accent); margin-bottom: 1rem;">DATE: December 21, 2026</p>
+                    <p style="font-family: var(--font-mono); color: var(--accent); margin-bottom: 1rem;">VENUE: Local Content Towers, Yenagoa</p>
+                    <p>The top innovations will be showcased to the NCDMB, investors, and industry stakeholders. The most promising ventures will be awarded funding and fast-tracked into post-competition incubation.</p>
                 </div>
             </div>
         </section>
+
     </main>
 
+    <!-- Global Footer -->
     <footer class="site-footer">
         <div class="container footer-container">
             <div class="footer-info">
